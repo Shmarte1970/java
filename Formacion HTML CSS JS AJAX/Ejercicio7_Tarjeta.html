@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Formulario de Tarjeta de Crédito</title>
+    <style>
+        body {
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+            margin-top: 60px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #e6e6e6;
+            border-radius: 5px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .form-group input[type="text"],
+        .form-group select {
+            flex: 1;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .btn-group {
+            text-align: center;
+        }
+
+        .btn-group button {
+            margin-right: 10px;
+            padding: 8px 20px;
+            background-color: #ccc;
+            border: none;
+            border-radius: 4px;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .btn-group button:last-child {
+            margin-right: 0;
+        }
+
+        .payment-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #comentarios {
+            width: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form>
+            <div class="form-group">
+                <label for="OS">Tipo de Tarjeta</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" name="Visa" value="Visa">Visa</label>
+                    <input type="checkbox" name="MCard" value="MCard">Mastercard</label>
+                    <input type="checkbox" name="Aexp" value="Aexp">American Express</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="Tarjeta">N. Tarjeta</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre">
+            </div>
+
+            <div class="form-group">
+                <label for="fecha_caducidad">Fecha de Caducidad</label>
+                <select id="fecha_caducidad_mes" name="fecha_caducidad_mes">
+                    <option value="">Mes</option>
+                    <option value="01">Enero</option>
+                    <option value="02">Febrero</option>
+                    <option value="03">Marzo</option>
+                    <!-- Resto de opciones del 01 al 12 -->
+                </select>
+                <select id="fecha_caducidad_anio" name="fecha_caducidad_anio">
+                    <option value="">Año</option>
+                    <option value="2022">2022</option>
+                    <option value="2023">2023</option>
+                    <option value="2024">2024</option>
+                    <!-- Resto de opciones de años -->
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="fecha_caducidad_mes">Fecha de Alta:</label>
+                <select id="fecha_alta_dia" name="fecha_alta_dia">
+                    <option value="">Día</option>
+                    <option value="01">01</option>
+                    <option value="02">02</option>
+                    <option value="03">03</option>
+                    <!-- Resto de opciones del 01 al 31 -->
+                </select>
+                <select id="fecha_alta_mes" name="fecha_alta_mes">
+                    <option value="">Mes</option>
+                    <option value="01">Enero</option>
+                    <option value="02">Febrero</option>
+                    <option value="03">Marzo</option>
+                    <!-- Resto de opciones del 01 al 12 -->
+                </select>
+                <select id="fecha_alta_anio" name="fecha_alta_anio">
+                    <option value="">Año</option>
+                    <option value="2021">2021</option>
+                    <option value="2022">2022</option>
+                    <option value="2023">2023</option>
+                    <!-- Resto de opciones de años -->
+                </select>
+            </div>
+
+
+
+            <a href="Ejercicio7.html" target="_blank" onclick="javascript:window.close()">Ficha Cliente</a>
+    </div>
+</body>
+
+</html>

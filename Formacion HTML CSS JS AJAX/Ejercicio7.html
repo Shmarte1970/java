@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Formulario con estilo en tonos grises suaves</title>
+    <style>
+        body {
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+            margin-top: 60px;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #e6e6e6;
+            border-radius: 5px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .form-group input[type="text"],
+        .form-group select {
+            flex: 1;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .btn-group {
+            text-align: center;
+        }
+
+        .btn-group button {
+            margin-right: 10px;
+            padding: 8px 20px;
+            background-color: #ccc;
+            border: none;
+            border-radius: 4px;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .btn-group button:last-child {
+            margin-right: 0;
+        }
+
+        .payment-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #comentarios {
+            width: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form>
+            <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre">
+            </div>
+
+            <div class="form-group">
+                <label for="apellidos">Apellidos</label>
+                <div>
+                    <input type="text" id="apellido1" name="apellido1" placeholder="Primer Apellido">
+                    <input type="text" id="apellido2" name="apellido2" placeholder="Segundo Apellido">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="domicilio">Domicilio</label>
+                <input type="text" id="domicilio" name="domicilio" placeholder="Ingrese su domicilio">
+            </div>
+
+            <div class="form-group">
+                <label for="sexo">Sexo</label>
+                <div class="radio-group">
+                    <input type="radio" name="sexo" value="hombre"> Hombre</label>
+                    <input type="radio" name="sexo" value="mujer"> Mujer</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="OS">Sistema Operativo</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" name="Windows" value="Windows">Windows</label>
+                    <input type="checkbox" name="Mac" value="Mac">Mac</label>
+                    <input type="checkbox" name="Linux" value="Linux">Linux</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="ciudad">Ciudad</label>
+                <select id="ciudad" name="ciudad">
+                    <option value="1">Ciudad 1</option>
+                    <option value="2">Ciudad 2</option>
+                    <option value="3">Ciudad 3</option>
+                    <option value="4">Ciudad 4</option>
+                </select>
+            </div>
+
+
+            <div class="form-group">
+                <label for="comentarios">Comentarios</label>
+            </div>
+
+            <div class="form-group">
+                <textarea id="comentarios" name="comentarios" rows="4" placeholder="Ingrese sus comentarios"></textarea>
+            </div>
+
+
+            <div class="btn-group">
+                <button type="submit">Aceptar</button>
+                <button type="reset">Borrar</button>
+            </div>
+
+        </form>
+        <a href="Ejercicio7_Tarjeta.html" onclick="javascript:window.close()" target="_blank">Forma de pago</a>
+    </div>
+</body>
+
+</html>

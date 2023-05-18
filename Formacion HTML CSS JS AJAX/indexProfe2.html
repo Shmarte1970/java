@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+ <!-- Meta Tags -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Practica HTML5</title>
+
+</head>
+<body>
+<header>
+    <h1>Titulo de la pagina</h1>
+</header>
+<nav>
+    <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+</nav>
+<section>
+    <h1>Noticias</h1>
+    <article>
+        <section>
+            <h2>Llegan las vacaciones</h2>
+            <p>Dentro de poco nos veremos en la playa</p>
+        </section>
+    </article>
+    <hgroup>
+        <h2>
+            Sección <mark>Pádel</mark>            
+        </h2>   
+        <h3>
+            Hoy hablaremos del precioso deporte de raqueta
+        </h3>
+    </hgroup>
+
+    <article>
+        <section>
+            <h2>Se van las vacaciones</h2>
+            <p>Dentro de poco nos veremos en la oficina</p>
+            <p>
+                Tiempo de espera restante: <progress  max="100" value="65"></progress>
+          </p>
+          <form action="" method="">
+            <fieldset>
+                <legend>Formulario de contacto</legend>
+                <label>Esto es una etiqueta</label>
+                <input type="text" placeholder="Tu nombre" name="nombre" required autofocus>
+                <input type="email" placeholder="Correo electronico" name="email" required>
+                <input type="password" placeholder="Contraseña" name="contraseña" required>
+                <input type="url" placeholder="Tu web" name="url">
+                <input type="date" name="fecha">
+                <select name="" id=""><option value="">Adidas</option><option value="">Nike</option></select>
+                
+                <label>Buscar por agenda:
+                    <input type="text" name="agenda" list="agenda" />
+                <datalist id="agenda">
+                    <option value="Pablo"></option>
+                    <option value="Maria"></option>
+                    <option value="Javier"></option>
+                    <option value="Katia"></option>
+                    <option value="Juan Carlos"></option>
+                </datalist>
+                </label>
+                <input id="range" type="range" min="1" max="201" value="5" step="25">
+                <input type="button" onclick="alert(document.getElementById('range').value);" value="Testear">
+                <input type="submit" value="Enviar">
+            </fieldset>        
+          </form>
+        </section>
+        <section>
+            <form oninput="txtResultado.value = parseInt(txt1.value) + parseInt(txt2.value)">
+                <input type="number" name="txt1" />
+                <input type="number" name="txt2" />
+                <output name="txtResultado">0</output>
+            </form>
+            
+        </section>
+    </article>
+
+    <article>
+        <section>
+            <video width="640" height="360" poster="./img/poster.jpg" controls autoplay>
+                <!--  El atributo “poster”, muestra una imagen al empezar, hasta que no se le da al “play”-->
+                 <source src="./video/Bunny.webm" type="video/webm" /><!-- Chrome10+, Ffx4+, Opera10.6+ -->                 
+             </video> <br>
+
+             <audio src="./audio/musica.mp3" controls>
+                <a href="./img/imagen.png">Musica variada</a>
+             </audio>
+             <audio controls autoplay preload>
+                <source src="./audio/musica.mp3" type="audio/mpeg" />
+                Tu navegador no soporta esta caracteristica
+                </audio>
+                
+
+        </section>
+    </article>
+
+<aside>
+    <h1>Mi publicidad</h1>
+    <p>Texto publicitario</p>
+    <p>Otros temas de interes</p>
+</aside>
+<footer>
+    Información corporativa | Copyright © empresa, S. A. 2023, Todos los derechos reservados | Aviso legal | Política de Privacidad | Gestión publicitaria 
+</footer>
+</body>
+</html>
