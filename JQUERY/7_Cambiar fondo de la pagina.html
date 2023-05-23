@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("#enlace").hover(entraMouse);
+                $("#enlace").mouseout(saleMouse);
+              });
+            function entraMouse() {
+                $("body").css("background-color","green");
+                $("a").css("color","red");                
+              }
+            function saleMouse() {
+                $("body").css("background-color","blue");   
+                $("a").css("color","white");               
+            }
+        </script>       
+    </head>
+    <div>
+        <a id="enlace" href="http://www.msn.com">Noticias MSN</a>
+    </div>
+    </body>
+</html>

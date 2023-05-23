@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("#titulo1").click(function () {
+                    $("#titulo1").css("color","#ff0000");
+                    $("#titulo1").css("background-color","#ffff00");
+                    $("#titulo1").css("font-family","courier");
+                  });
+                $("#titulo2").click(function () {
+                    $("#titulo2").css("color","#ffff00");
+                    $("#titulo2").css("background-color","#ff0000");
+                    $("#titulo2").css("font-family","Arial");
+                  });
+              });
+        </script>
+    </head>
+    <body>
+		<div>
+			<h1>Selección elementos ID con FUNCTION()</h1>
+			<h1 id="titulo1">Primer título</h1>	
+			<h1 id="titulo2">Segundo título</h1>
+		</div>    
+    </body>
+</html>

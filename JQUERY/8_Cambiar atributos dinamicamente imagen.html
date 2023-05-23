@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                cambiarImagen();
+              });
+            function cambiarImagen() {
+                $("img").hover(function(){
+                    $(this).attr("src","img/joker.jpg");
+                });
+                $("img").mouseout(function(){
+                    $(this).attr("src","img/delorean.jpg");
+                });
+              }
+        </script>       
+    </head>
+    <div>
+        <h2>Cambiar imagen al pasar por encima</h2>
+			<img src="img/delorean.jpg">
+
+    </div>
+    </body>
+</html>

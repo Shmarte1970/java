@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("#boton1").click(function () {
+                    $("#descripcion").toggle("slow");
+                  });
+              });
+        </script>       
+    </head>
+    <input type="button" id="boton1" value="Mostrar/Ocultar">
+    <div id="descripcion" style="padding:20px; background-color:rgb(40, 220, 178)">
+        <p>HTML es el lenguaje que se emplea para el desarrollo de páginas de internet.</p>
+    </body>
+</html>

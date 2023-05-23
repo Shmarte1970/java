@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("input[type=range]").change(function () {
+                    var num = $(this).val();
+                    $("output").text(num);
+                  });
+              });
+        </script>       
+    </head>
+<body>
+    <form method="post">
+        Apellido <input type="text" name="txtapellido"
+             value="FORD" />
+        <br />
+    <input id="range"
+         name="salario" type="range"
+         min="1" max="257451" 
+         value="207451" step="50">
+        <output id="lblsalario">207451</output>
+        <input type="hidden" name="empno"
+             value="7322" />
+        <br />
+        <input type="button" value="Modificar datos de empleado" />
+    </form>
+    
+</body>
+</html>

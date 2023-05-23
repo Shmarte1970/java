@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                cambiarTamanyo();
+              });
+            function cambiarTamanyo() {
+                $("img").click(function () {
+                    $(this).attr("width","300");
+                    $(this).attr("height","250");
+                  });
+              }
+        </script>       
+    </head>
+    <div>
+        <h2>Cambiar atributos de objetos</h2>
+        <img src="img/imagen.png">
+    </div>
+    </body>
+</html>

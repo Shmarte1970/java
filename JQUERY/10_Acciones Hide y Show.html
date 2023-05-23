@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("#botonocultar").click(function () {
+                    $("#capa").hide("slow");
+                  });
+                $("#botonmostrar").click(function () {
+                    var tiempo = $("#texttiempo").val();
+                    tiempo = parseInt(tiempo);
+                    $("#capa").show(tiempo);
+                  });
+              });
+        </script>       
+    </head>
+    <input type="button" id="botonocultar" value="Ocultar imagen lentamente"/><br/>
+    Tiempo en mostrar imagen: 
+    <input type="text" id="texttiempo"/>		
+    <input type="button" id="botonmostrar" value="Mostrar imagen"/><br/><br/>
+    <div id="capa">
+        <img src="img/joker.jpg" style="width: 200; height: 200"/>
+    </div>
+
+    </body>
+</html>

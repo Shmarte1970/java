@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("#boton1").click(function () {
+                    $("#descripcion").fadeTo("slow",0.5);
+                });
+                $("#boton2").click(function () {
+                    $("#descripcion").fadeTo("slow",1);
+                });
+              });
+        </script>       
+    </head>
+    <input type="button" id="boton1" value="Reducir opacidad">
+    <input type="button" id="boton2" value="Aumentar opacidad">
+    <div id="descripcion" style="padding:20px; background-color:blue">
+        <p>HTML es el lenguaje que se emplea para el desarrollo de páginas de internet.</p>
+    </div>
+    </body>
+</html>

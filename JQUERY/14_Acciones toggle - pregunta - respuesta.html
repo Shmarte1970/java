@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script type="text/javascript">
+          $(document).ready(function () {
+            $('#alternar-respuesta-ej1').click(function () {
+                $('#respuesta-ej1').toggle();
+            });
+        });
+        </script>       
+    </head>
+<body>
+    <p>
+        ¿De que color es el caballo blanco de Santiago? (<a href="#" id="alternar-respuesta-ej1">ver respuesta</a>)
+
+        <div id="respuesta-ej1" style="display:none"><B>De cualquiera menos blanco</b> </div>
+</body>
+</html>

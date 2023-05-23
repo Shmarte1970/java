@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("#botonoperacion").click(function () {
+                    var valor = $("input[name=operacion]:checked").val();
+                    $("#resultado").text(valor);
+                    var num1 = parseInt($("#textnum1").val());
+                    var num2 = parseInt($("#textnum2").val());
+                    var resultado;
+
+                    if (valor == "sumar"){
+                        resultado = num1 + num2;
+                    }
+                    else if (valor == "restar"){
+                        resultado = num1 - num2;
+                    }
+                    else if (valor == "multiplicar"){
+                        resultado = num1 * num2;
+                    }
+                    else {
+                        resultado = num1 / num2;
+                    }
+                    $("#textresultado").val(resultado);
+                  });
+              });
+        </script>       
+    </head>
+<body>
+    <form>
+        Introduzca NUMERO 1 <input type="text" id="textnum1" /><br />
+        Introduzca NUMERO 2 <input type="text" id="textnum2" /><br />
+        Resultado <input type="text" id="textresultado" />
+        <br />
+        <ul>
+            <li><input type="radio" name="operacion" id="multiplicar" value="multiplicar" />Multiplicar</li>
+            <li><input type="radio" name="operacion" id="sumar" value="sumar" />Sumar</li>
+            <li><input type="radio" name="operacion" id="restar" value="restar" />Restar</li>
+            <li><input type="radio" name="operacion" id="dividir" value="dividir" />Dividir</li>
+        </ul>
+        <input type="button" id="botonoperacion" value="Mostrar resultado" />
+        <h1 id="resultado"></h1>
+    </form>    
+</body>
+</html>

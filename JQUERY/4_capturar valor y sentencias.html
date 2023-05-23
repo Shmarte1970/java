@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("#but").click(resultado);
+              });
+            function resultado(){
+                var res = $("#nota").val();
+                if (res < 5){
+                    $("#res").text("INSUFICIENTE");
+                    $("#res").css("color","red");
+                    $("#res").css("font-weight","bold");
+                    $("#res").css("font-family","segoe UI");
+                }
+                else if (res == 5){
+                    $("#res").text("SUFICIENTE");
+                    $("#res").css("color","green");
+                    $("#res").css("font-weight","bold");
+                    $("#res").css("font-family","segoe UI");
+                }
+                else if (res == 6){
+                    $("#res").text("BIEN");
+                    $("#res").css("color","yellow");
+                    $("#res").css("font-weight","bold");
+                    $("#res").css("font-family","segoe UI");
+                }
+                else if (res == 7 || res == 8){
+                    $("#res").text("NOTABLE");
+                    $("#res").css("color","blue");
+                    $("#res").css("font-weight","bold");
+                    $("#res").css("font-family","segoe UI");
+                }
+                else if (res == 9 || res == 10){
+                    $("#res").text("SOBRESALIENTE");
+                    $("#res").css("color","pink");
+                    $("#res").css("font-weight","bold");
+                    $("#res").css("font-family","segoe UI");
+                }
+                else {
+                    $("#res").text("EL VALOR INTRODUCIDO ES INCORRECTO");
+                    $("#res").css("color","black");
+                    $("#res").css("font-weight","900");
+                    $("#res").css("font-family","verdana");
+                }
+            };
+        </script>       
+    </head>
+    <body>
+        <p>Introduzca nota entre 0 y 10:</p>
+    <input type="text" id="nota" />&nbsp;&nbsp;<button id="but">RESULTADO</button><br /><br />
+    <p id="res"></p>
+    </body>
+</html>

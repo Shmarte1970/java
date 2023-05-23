@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("#botontamanyo").click(cambiarTamanyo);
+              });
+              function cambiarTamanyo() {
+                var ancho = $("#textancho").val();
+                var alto = $("#textalto").val();
+                $("#ancho").text("Ancho: " + ancho);
+                $("#alto").text("Alto: " + alto);
+                $("#etiqueta").css("width",ancho + "px");
+                $("#etiqueta").css("height",alto + "px");
+                }
+        </script>       
+    </head>
+    <p>
+        <h1 id="ancho">
+		</h1>
+		<h1 id="alto">
+		</h1>		
+		<p>Introduzca un ancho: <input type="text" id="textancho"/></p>
+		<p>Introduzca un alto: <input type="text" id="textalto"/></p>
+		<p><input type="button" id="botontamanyo" value="Cambiar tamanyo"/></p>
+		<div id="etiqueta" style="background:#00a887;height:100px;width:100px;position:absolute;">
+		</div>
+    </body>
+</html>
