@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            .estilo1{
+                font-family: Verdana;
+                color: #0099ff;
+            }
+    
+            .estilo2{
+                font-family: Arial;
+                color: #ffffff;
+            }
+            
+            .estilo3{
+                font-family: Verdana;
+                color: red;
+            }
+                    .estilo8{
+                border: #F2BE84 5px solid;
+                font-family: sans-serif;
+                color: blue;
+                            background: blue;
+            }
+            
+            .estilo4{
+                border: #F2BE84 5px solid;
+                font-family: sans-serif;
+                color: blue;
+                            background: #D0D0D0;
+            }
+            
+            .estilo5{
+                font-family: Georgia;
+                color: blue;
+            }
+                    
+            .estilo6{
+                font-family: Helvetica;
+                color: fuchsia;
+            }
+            </style>
+       
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script type="text/javascript">
+            function calcularPrecios() {
+                var precio = 0;
+                $("select").each(function () {
+                    var num1 = parseInt($(this).val());
+                    precio = precio +num1;
+                  });
+                $("input[type=checkbox]:checked").each(function () {
+                    var num2 = parseInt($(this).val());
+                    precio = precio +num2;
+                    });
+                $("input[type=radio]:checked").each(function () {
+                    var num3 = parseInt($(this).val());
+                    precio = precio +num3;
+                  });
+                $("#siniva").val(precio);
+                $("#coniva").val(precio+precio*21/100);
+              }
+        </script>       
+    </head>
+<body>
+    <table class="estilo4">
+        <tr>
+        <td> <fieldset>
+         <div id="titulo1" >Procesador</div>
+         
+         
+         <input type="radio" value="30000" name="rdbestilos2">Pentium III 450 Mhz<br>
+         <input type="radio" value="35000" name="rdbestilos2">Pentium III 500 Mhz<br>
+         <input type="radio" value="40000" name="rdbestilos2">Pentium III 550 Mhz<br>
+         </fieldset></td>
+         
+            
+         <td><fieldset class="estilo4">
+         <div id="titulomonitores"  >Memoria RAM</div>
+           <form name="form2" >
+           <input type="radio" value="10000" name="rdbestilos">64 Mb (10.000 pts)<br>
+         <input type="radio" value="18000" name="rdbestilos">128 Mb (18.000 pts)<br>
+         <input type="radio" value="35000" name="rdbestilos">256 Mb (35.000 pts)<br>
+           </form>
+         </fieldset></td>
+         </tr>
+         <tr>
+             
+         <td><fieldset>
+         <div id="titulodisco" >Disco Duro</div>
+             <select id="selectmodelodisco" >
+         <option value="40000">12 Gb</option>
+         <option value="50000">24 Gb</option>
+         <option value="60000">48 gb</option>
+         <option value="70000">64 gb</option>
+             </select>
+         </fieldset></td>
+             
+             
+         <td><fieldset>
+         <div id="tituloMultimedia" >Multimedia</div>
+         <form name="form3">
+         <input type="checkbox" value="13500" name="chkcompra">Tarjeta de sonido 256 bits + Altavoces<br>
+         <input type="checkbox" value="18000" name="chkcompra">DVD-ROM 6x<br>
+         </fieldset></td>
+       
+         </tr>
+         <tr>
+         
+         <td><fieldset>
+         <div id="titulomonitores" >Monitores</div>
+         <select id="selectmodelomonitor" size="4" >
+         <option value="25000">15'(25.000 pts)</option>
+         <option value="47000">17' (47.000 pts)</option>
+         <option value="87000">19' (87.000 pts) </option>
+         <option value="134000">21' (134.000 pts) </option>
+         </select>
+         </fieldset></td>
+     
+         <td><fieldset>
+         <legend>Precio sin IVA</legend>
+             <input type="text" id="siniva" readonly>
+         <br>
+         </fieldset>
+              
+         <fieldset>
+         <legend>Precio con IVA</legend>
+         <input type="text" id="coniva" readonly>
+         <br>
+         </fieldset>
+         
+         <fieldset>
+         <input type="button" value="Calcular precios" onclick="calcularPrecios()">
+         <br>
+         <input type="button" value="Enviar pedido" >
+         </fieldset>
+         </td>
+         </tr>
+        
+     </table>
+     
+</body>
+</html>

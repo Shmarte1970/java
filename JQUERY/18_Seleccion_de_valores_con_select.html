@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#botoncambiar").click(function () {
+                var color = $("#colores").val();
+                $("#resultado").css("color", color);
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <form>
+        Seleccione un color:
+        <select id="colores">
+            <option value="blue">Azul</option>
+            <option value="green">Verde</option>
+            <option value="yellow">Amarillo</option>
+            <option value="fuchsia">Fuchsia</option>
+            <option value="orange">naranja</option>
+            <option value="#4B7DB3">Azul Claro</option>
+        </select>
+        <br />
+        <input type="button" id="botoncambiar" value="Cambiar color" />
+        <h1 id="resultado">Esto es un texto de prueba
+        </h1>
+    </form>
+</body>
+
+</html>

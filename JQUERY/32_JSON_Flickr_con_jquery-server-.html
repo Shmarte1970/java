@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            img {
+              height: 150px;
+              float: left;
+            }
+        </style>          
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script>
+    $(document).ready((function(){
+        $("#btnbuscar").click(function(){
+            //LIMPIAMOS LOS ELEMENTOS DE IMAGENES
+            $("#imagenes").html("");
+            var flickerAPI = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+            var datos = $("#textbuscar").val();
+            $.getJSON( flickerAPI, {
+              tags: datos,
+              tagmode: "any",
+              format: "json"
+            })
+              .done(function( data ) {
+                $.each( data.items, function( i, item ) {
+                  $( "<img>" ).attr( "src", item.media.m ).appendTo( "#imagenes" );
+                  if ( i == 6 ) {
+                    return false;
+                  }
+                });
+              });
+        });        
+    }));
+        </script>       
+    </head>
+<body>
+    <input type="text" id="textbuscar"/>
+    <button type="button" id="btnbuscar">Buscar imágenes</button>
+    <hr/>
+    <div id="imagenes"></div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <style>
+            img {
+              height: 150px;
+              float: left;
+            }
+            </style>
+          
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script>
+            $(document).ready((function () {
+                $("#btnbuscar").click(function () {
+                    $("#clientes").html("");
+                    $.getJSON("CLIENTES.json", function (data) {
+                        var resultado = "<ul>";
+                            $.each(data.clientes, function (i, item) {
+                                var nombre = item.nombre;
+                                resultado += "<li>" + nombre + "</li>";
+                              });
+                              resultado += "</ul>";
+                              $("#clientes").html(resultado);
+                      });
+                  });
+              }));
+        </script>       
+    </head>
+<body>
+    <button type="button" id="btnbuscar">Mostrar clientes</button>
+    <hr/>
+    <div id="clientes"></div>
+</body>
+</html>

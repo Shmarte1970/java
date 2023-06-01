@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            label {
+                font-weight: bold;
+            }
+    
+            h1 {
+                color: blue;
+                text-align: center;
+            }
+    
+            body {
+                background-color: lightskyblue;
+                margin-left: 150px;
+                margin-right: 150px;
+                min-width: 500px;
+            }
+    
+            form {
+                background-color: beige;
+                padding: 10px;
+            }
+        </style>    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("#botoncontar").click(function () {
+                    var contar = 0;
+                    $("input[type=text]").each(function () {
+                        contar = contar +1;
+                      });
+                    $("#resultado").text(contar);
+                  });
+              });
+        </script>       
+    </head>
+<body>
+    <form>
+        <h1>
+            Contar el numero de cajas que hay con EACH
+        </h1>
+        <input type="text" value="aa" id="text1" /><br />
+        <input type="text" value="bb" id="text2" /><br />
+        <input type="text" value="cc" id="text3" /><br />
+        <input type="text" value="dd" id="text4" /><br />
+        <input type="text" value="ee" id="text5" /><br />
+        <input type="text" value="ff" id="text6" /><br />
+
+        <br />
+        <input type="button" id="botoncontar" value="Contar numero de cajas" />
+        <h1 id="resultado"></h1>
+    </form>
+</body>
+</html>

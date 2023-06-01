@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            label {
+                font-weight: bold;
+            }
+    
+            h1 {
+                color: blue;
+                text-align: center;
+            }
+    
+            body {
+                background-color: lightskyblue;
+                margin-left: 150px;
+                margin-right: 150px;
+                min-width: 500px;
+            }
+    
+            form {
+                background-color: beige;
+                padding: 10px;
+            }
+
+            .amarillo {
+            background-color: yellow;
+            }
+
+        </style>    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("#botonnombre").click(function(){
+                    var nombre = $("#textnombre").val();
+
+                    $("#div1").find("input").each(function () {
+                        $(this).val(nombre);
+                    });
+                });
+            });
+        </script>       
+    </head>
+<body>
+    <form>
+        <h1>
+            Escribir en las cajas de un DIV
+        </h1>
+        <p>
+            Introduzca un nombre
+            <input type="text" id="textnombre" />
+            <input type="button" id="botonnombre" class="amarillo" value="Mostrar el nombre" />
+        </p>
+        <div id="div1">
+            <input type="text"  value="aa" id="text1" /><br />
+            <input type="text" value="bb" id="text2" /><br />
+            <input type="text"  value="cc" id="text3" /><br />
+            <input type="text" value="dd" id="text4" /><br />
+            <input type="text"  value="ee" id="text5" /><br />
+        </div>
+        <br/>
+        <div id="div2">
+            <input type="text" value="aa" id="text1" /><br />
+            <input type="text" value="bb" id="text2" /><br />
+            <input type="text"  value="cc" id="text3" /><br />
+            <input type="text" value="dd" id="text4" /><br />
+            <input type="text"  value="ee" id="text5" /><br />
+        </div>
+        <br />
+    </form>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            label {
+                font-weight: bold;
+            }
+    
+            h1 {
+                color: blue;
+                text-align: center;
+            }
+    
+            body {
+                background-color: lightskyblue;
+                margin-left: 150px;
+                margin-right: 150px;
+                min-width: 500px;
+            }
+    
+            form {
+                background-color: beige;
+                padding: 10px;
+            }
+
+            .amarillo {
+            background-color: yellow;
+            }
+
+        </style>    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("#botonsumar").click(function () {
+                    var suma = 0;
+                    $("input[type=checkbox]:checked").each(function () {
+                        var num = parseInt($(this).val());
+                        suma = suma +num;
+                      });
+                      $("#resultado").text(suma);
+                  });
+              });
+        </script>       
+    </head>
+<body>
+    <form>
+        <h1>
+            Sumar todos los numeros
+        </h1>
+        <input type="button" id="botonsumar" value="Sumar" /><br />
+
+        </p>
+        <input type="checkbox" id="chk1" value="16" />16<br />
+        <input type="checkbox" id="chk2" value="14" />14<br />
+        <input type="checkbox" id="chk3" value="25" />25<br />
+        <input type="checkbox" id="chk4" value="121" />121<br />
+        <input type="checkbox" id="chk5" value="420" />420<br />
+        <br />
+        <h1 id="resultado"></h1>
+    </form>
+</body>
+</html>

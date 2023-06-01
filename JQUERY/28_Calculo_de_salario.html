@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            label {
+                font-weight: bold;
+            }
+    
+            h1 {
+                color: blue;
+                text-align: center;
+            }
+    
+            body {
+                background-color: lightskyblue;
+                margin-left: 150px;
+                margin-right: 150px;
+                min-width: 500px;
+            }
+    
+            form {
+                background-color: beige;
+                padding: 10px;
+            }
+
+            .amarillo {
+            background-color: yellow;
+            }
+
+            .centered {
+            margin: auto;
+            width: 30%;
+            border: 3px solid #73AD21;
+            padding: 10px;
+        }
+
+        </style>    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("#btnCalcSueldo").click(function () {
+                    var vsueldo = parseInt($("#sOcupacion").val());
+                    $("input[type=checkbox]:checked").each(function () {
+                        var num = parseInt($(this).val());
+                        vsueldo = vsueldo +num;
+                    });
+                    $("input[type=radio]:checked").each(function () {
+                        var num2 = parseInt($(this).val());
+                        vsueldo = vsueldo +num2;
+                    });
+                    $("#txtSueldo").val(vsueldo);
+                });
+            });
+        </script>       
+    </head>
+<body>
+    <table class="centered">
+        <tr>
+            <td>
+                Introduzca nombre:
+            </td>
+            <td>
+                <input type="text" id="txtNombre" name="cajaNombre" placeholder="Nombre" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Edad:
+            </td>
+            <td>
+                <input type="radio" id="rMayor" name="radioEdad" value="50" />Mayor de 21
+                <br />
+                <input type="radio" id="rMenor" name="radioEdad" value="30" />Menor de 21
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Ocupación:
+            </td>
+            <td>
+                <select id="sOcupacion" name="selectocupacion">
+                    <option value="1200" name="profesor">Profesor</option>
+                    <option value="1000" name="estudiante">Estudiante</option>
+                    <option value="1500" name="ingeniero">Ingeniero</option>
+                    <option value="1100" name="jubilado">Jubilado</option>
+                    <option value="900" name="otro">Otro</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Situaciones:
+            </td>
+            <td>
+                <input type="checkbox" id="chk1" value="150" />Casado<br />
+                <input type="checkbox" id="chk2" value="250" />Familia Numerosa<br />
+                <input type="checkbox" id="chk3" value="300" />Discapacidad<br />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" value="Calcular Sueldo" id="btnCalcSueldo" />
+            </td>
+            <td>
+                <input type="text" id="txtSueldo" placeholder="Sueldo" readonly />
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

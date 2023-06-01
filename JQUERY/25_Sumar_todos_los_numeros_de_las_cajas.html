@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            label {
+                font-weight: bold;
+            }
+    
+            h1 {
+                color: blue;
+                text-align: center;
+            }
+    
+            body {
+                background-color: lightskyblue;
+                margin-left: 150px;
+                margin-right: 150px;
+                min-width: 500px;
+            }
+    
+            form {
+                background-color: beige;
+                padding: 10px;
+            }
+
+            .amarillo {
+            background-color: yellow;
+            }
+
+        </style>    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("#botonsumar").click(function () {
+                    var suma = 0;
+                    $("input[type=text]").each(function () {
+                        suma = suma + parseInt($(this).val());
+                      });
+                    $("#resultadonumeros").text(suma);
+                  });
+              });
+        </script>       
+    </head>
+<body>
+    <form>
+        <h1>
+            Sumar todos los numeros de las cajas
+        </h1>
+        <input type="button" id="botonsumar" value="Sumar" />
+        </p>
+        <input type="text" value="3" id="text1" /><br />
+        <input type="text" value="6" id="text2" /><br />
+        <input type="text" value="9" id="text3" /><br />
+        <input type="text" value="12" id="text4" /><br />
+        <input type="text" value="14" id="text5" /><br />
+        <br />
+        <h1 id="resultadonumeros"></h1>
+    </form>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/sweetalert.css" /> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script src="js/sweetalert.min.js"></script>
+        <script src="js/sweetalert-dev.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("#boton1").click(function(){
+                    swal("Nueva alta de usuario, ¡¡revisa el mail!!", "Datos almacenados correctamente", "success"); //success, error, warning,...
+                });
+              });
+        </script>       
+    </head>
+<body>
+    <input type="button" id="boton1" value="Pulsar">
+</body>
+</html>

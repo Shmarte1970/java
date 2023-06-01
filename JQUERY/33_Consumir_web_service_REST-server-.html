@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+         
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script type="text/javascript">
+            function getDatos() {
+                $.ajax({
+                    type: "GET", url:"https://services.odata.org/V4/Northwind/Northwind.svc/Employees",
+                    //contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    //data:"",
+                    success: function (data) {
+                        //SABEMOS QUE NOS DEVUELVE UN ARRAY DE OBJETOS
+                        //EMPLOYEE DENTRO DE LA PROPIEDAD VALUE
+                        //POR LO QUE PODEMOS RECOGERLO
+                    var numeroempleados = data.value.length;
+                    var resultado ="<table border='1'>";
+                        resultado += "<tr>";
+                        resultado += "<th>NOMBRE</th>";
+                        resultado += "<th>OFICIO</th>";
+                        resultado += "<th>DIRECCION</th>";
+                        resultado += "<th>CIUDAD</th>";
+                        resultado += "<th>TELEFONO</th>";
+                        resultado += "<th>FOTO</th>";
+                        resultado += "</tr>";
+                        //RECORREMOS TODOS LOS EMPLEADOS
+
+                        for (var i = 0; i < numeroempleados; i++){
+                            //CAPTURAMOS CADA UNO DE LOS EMPLEADOS
+                            var emp = data.value[i];
+                            //PINTAMOS SU RESULTADO SOBRE UN DIV
+                            //CON EL FORMATO QUE NECESITEMOS
+                            resultado += "<tr>";
+                            resultado += "<td>" + emp.FirstName + " " + emp.LastName + "</td>";
+                            resultado += "<td>" + emp.Title + "</td>";
+                            resultado += "<td>" + emp.Address + "</td>";
+                            resultado += "<td>" + emp.City + "</td>";
+                            resultado += "<td>" + emp.HomePhone + "</td>";
+                            resultado += "<td><img src='" + emp.PhotoPath + "'/></td>";
+                            resultado += "</tr>";
+                        }
+                        resultado += "</table>";
+                        $("#datos").html(resultado);
+                    },
+                    error: function (msg) {
+                        $("#datos").text("Error: " + msg.responseXML);
+                      }
+                    });
+                }
+        </script>       
+    </head>
+<body>
+    <form id="form1">
+        <button type="button" onclick="getDatos()">Mostrar empleados</button>
+        <hr />
+        <div id="datos"></div>
+    </form>
+</body>
+</html>

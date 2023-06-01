@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            label {
+                font-weight: bold;
+            }
+    
+            h1 {
+                color: blue;
+                text-align: center;
+            }
+    
+            body {
+                background-color: lightskyblue;
+                margin-left: 150px;
+                margin-right: 150px;
+                min-width: 700px;
+            }
+    
+            form {
+                background-color: beige;
+                padding: 10px;
+            }
+        </style>    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("#boton").click(function () {
+                    
+                    var nombre = $("#nom").val();
+                    var apellido = $("#ape").val();
+                    var apellido2 = $("#ape2").val();
+                    var domicilio = $("#dom").val();
+                    var ciudad = $("#ciu").val();
+                    var sexo = $("input[name=sexo]:checked").val();
+                    var comentarios = $("#com").val();
+
+                    $("#resultado").html("<strong>Datos almacenados</strong><br/>" +  nombre + "&nbsp;" 
+                    + apellido + "&nbsp;" + apellido2 + "<br/>Domicilio: " + domicilio +
+                     "<br/>Ciudad: " + ciudad + "<br/>Sexo: " + sexo + "<br/>Comentarios: "
+                      + comentarios);
+                  });
+              });
+        </script>       
+    </head>
+<body>
+    <h1>Ficha de Cliente</h1>
+    <form>
+        <label>Nombre: </label><input id="nom" type="text" /><br /><br />
+        <label>Primer Apellido: </label><input id="ape" type="text" />&nbsp;<label>Segundo Apellido: </label><input id="ape2" type="text" /><br /><br />
+        <label>Domicilio: </label><input id="dom" type="text" /><br /><br />
+        <label>Ciudad: </label><select id="ciu">
+            <option value="Segovia">Segovia</option>
+            <option value="Madrid">Madrid</option>
+            <option value="Barcelona">Barcelona</option>
+            <option value="A Coruna">A Coru&ntilde;a</option>
+        </select><br /><br />
+        <label>Sexo: </label><input type="radio" name="sexo" value="Hombre" />Hombre &nbsp; <input type="radio" name="sexo" value="Mujer" />Mujer<br /><br />
+        <label>Introduzca comentarios: </label><br /><br />
+        <textarea id="com"></textarea><br /><br />
+        <input type="button" id="boton" value="Aceptar" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="reset" value="Borrar" /><br /><br />
+        <div id="resultado"></div>
+    </form>
+</body>
+</html>
